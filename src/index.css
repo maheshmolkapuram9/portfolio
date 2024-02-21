@@ -42,7 +42,7 @@ body{
 
 .profilePic{
   height: 90vh;
-  min-height: 500px;
+  max-height: 500px;
   width: auto;
   border-radius: 50%;
   margin-left: 2rem;
