@@ -24,7 +24,7 @@ const Home = () => {
             </div>
             <div className="homeProfileChild">
                     <img className="profilePic" 
-                        src="./images/mahesh.jpg" 
+                        src="./images/mahesh.JPG" 
                         title="Mahesh Pic" 
                         alt="Mahesh Profile pic" 
                     />
