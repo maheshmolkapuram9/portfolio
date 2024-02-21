@@ -42,6 +42,7 @@ body{
 
 .profilePic{
   height: 90vh;
+  min-height: 500px;
   width: auto;
   border-radius: 50%;
   margin-left: 2rem;
@@ -454,6 +455,9 @@ p{
   }
   .home{
     justify-content: flex-start;
+  }
+  .jobTitle{
+    display: none;
   }
 }
 
