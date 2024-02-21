@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap');
+
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+}
+
+body{
+  background: url("../public/images/bg.webp") fixed;
+  font-family: 'Dancing Script', cursive, sans-serif;
+  font-weight: 700;
+  font-size: 6.75rem;
+
+}
+
+/* Home */
+.home{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.homeProfile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeProfileChild{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilePic{
+  height: 90vh;
+  width: auto;
+  border-radius: 50%;
+  margin-left: 2rem;
+  box-shadow: 0 0 50px 5px #000;
+  animation: Launch 1s;
+  transition: box-shadow,transform,scale,translate;
+  transition-duration: 0.3s;
+}
+
+.profilePic:hover{
+  box-shadow: 0 0 80px 1px #000;
+  scale: 1.01;
+  translate: 0 -10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav div{
+  margin: 3rem 0;
+  overflow: hidden;
+  animation: LaunchLinks 0.3s;
+  max-width: max-content;
+  padding: 0 10px;
+  text-shadow: 0 0 25px #000;
+}
+
+/* Navlink */
+.about:hover span{
+  display: none;
+}
+
+.about:hover::after{
+  content: "About";
+}
+
+.work:hover span{
+  display: none;
+}
+
+.work:hover::after{
+  content: "Work";
+  color: rgb(118, 195, 197);
+}
+
+.contact:hover span{
+  display: none;
+}
+
+.contact:hover::after{
+  content: "Contact";
+  color: rgb(118, 195, 197);
+}
+
+nav div:hover{
+  animation: Hover 0.5s forwards;
+}
+
+.work span, .contact span, .work, .contact{
+  color: rgb(118, 195, 197);
+}
+
+.jobTitle {
+  position: fixed;
+  bottom: 5px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1rem;
+  opacity: 0.4;
+  transition: all 0.4s;
+}
+
+.jobTitle:hover{
+  opacity: 1;
+  transform: scale(1.1) translateY(15px);
+}
+
+@keyframes Launch{
+  0% {transform: scale(1.3);}
+  100% {transform: scale(1.0);}
+}
+
+@keyframes LaunchLinks{
+  0% {opacity: 0; transform: translateY(20vh);}
+  70%{opacity: 0.1;}
+  100% {opacity: 1; transform: translateY(0vh);}
+}
+
+@keyframes Hover{
+  0% {opacity: 0; transform: translateX(0px);}
+  100% {opacity: 1; transform: translateX(30px);}
+}
+
+@keyframes HoverContact{
+  0% {opacity: 0; transform: translateX(0px);}
+  100% {opacity: 1; transform: translateX(10px);}
+}
+
+/* About */
+.aboutLayout{
+  font-family: "Hind Guntur", sans-serif;
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: 'Dancing Script', cursive, sans-serif;
+  font-size: 50px;
+  color: rgb(118, 195, 197);
+  margin-top: 2rem;
+  animation: Launch 1s;
+}
+
+.underLine{
+  background-color: rgb(118, 195, 197);;
+  height: 4px;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  position: relative;
+  left: 0;
+  animation: Underline 1s both;
+}
+
+@keyframes Underline {
+  0%{width: 0;}
+  100%{width: 100%;}
+}
+
+.profileSummary{
+  animation: LaunchLinks 1s;
+}
+
+.svgs{
+  width: 1.2rem;
+  vertical-align: middle;
+  margin-right: 1rem;
+  fill: aliceblue;
+}
+
+.skillPillContainer{
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.projectPill{
+  width: 250px;
+  padding: 2px 0;
+  background: linear-gradient(60deg,#272e40 23.07%,#c67976 77.51%);
+  border: 1px solid #01c0ea;
+  border-radius: 58px;
+  cursor: pointer;
+  margin: 1.2rem 1rem;
+}
+
+.skillPresenterContainer{
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+p{
+  padding-bottom: 1.616rem;
+  text-align: justify;
+  line-height: 1.618;
+}
+
+.connect a{
+  display: inline-block;
+  color: rgb(197, 120, 118);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.connect a:hover{
+  cursor: pointer;
+  color:  rgb(118, 195, 197);
+  animation: HoverContact 0.5s forwards;
+}
+
+/* Footer */
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  background: linear-gradient(0deg,#00000080,#fff0);
+}
+
+.footer a{
+  display: flex;
+}
+
+.footer ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul li{
+  list-style: none;
+  text-align: center;
+  width: 3rem;
+  background:#00000080;
+  border: 1px solid rgb(197, 120, 118);
+  margin: 0.5rem 1rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer ul li:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.footerSvg{
+  margin-right: 0;
+  width: 1.5rem;
+}
+
+.achievements ul{
+  text-align: justify;
+  list-style: none;
+  padding-top: 1rem;
+}
+
+.achievements ul li{
+  background: url(../public/svgs/arrow.svg) no-repeat;
+  background-position-y:2px ;
+  padding-left: 2rem;
+}
+
+/* work expr */
+.workEx{
+  background: linear-gradient(60deg,#272e40 23.07%,#c67976 77.51%);
+  margin: 2rem auto;
+  margin-bottom: 8rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.WorkExHover, .projectHover{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background: linear-gradient(60deg,#a276c6 23.07%,#01c0ea 48.87%,#6795a2 77.51%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.workEx:hover, .projectContainer:hover, .certificates:hover{
+  .WorkExHover{
+    transform: rotate(-5.5deg);
+  }
+}
+
+.workTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.618rem;
+}
+
+.workEx div h5{
+  font-size: 1.35rem;
+  letter-spacing: 0.4px;
+}
+
+.workEx div h6 span{
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.workEx h6{
+  font-size: 1rem;
+}
+
+.workEx p{
+  padding-bottom: 0;
+  font-size: 1rem;
+}
+
+/* certificates */
+.certificates{
+  background: linear-gradient(60deg,#272e40 23.07%,#c67976 77.51%);
+  min-width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin-right: 2rem;
+  position: relative;
+}
+
+.certificates h5{
+  font-size: 1.35rem;
+  padding-top: 1rem;
+}
+
+.certificates p{
+  padding-bottom: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  font-style: italic;
+  align-self: flex-end;
+  padding-right: 1rem;
+}
+
+.courseWork{
+  display: flex;
+  animation: scrolling 10s linear infinite;
+ 
+}
+
+.courseContainer{
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+}
+
+@keyframes scrolling{
+  from {transform:translateX(0%)}
+  to {transform: translateX(-100%);}
+}
+
+/* project */
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.projectContainer{
+  background: linear-gradient(60deg,#272e40 23.07%,#c67976 77.51%);
+  width: 280px;
+  min-width: 280px;
+  height: 350px;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.projectContainer h5{
+  font-size: 1.35rem;
+  padding-bottom: 1.1rem;
+}
+
+.technologies{
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.backtohome{
+  font-family: "Hind Guntur", sans-serif;
+  position: fixed;
+  font-size: 2rem;
+  top: 0rem;
+  right: 1rem;
+  color: blue;
+  text-decoration: underline;
+  z-index: 100;
+}
+
+@media screen and (max-width:599px) {
+  .projectPill{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .workTitle{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .projects{
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .homeProfileChild{
+    position: absolute;
+    right: 10px;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .home{
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .homeProfileChild{
+    position: fixed;
+    right: -40%;
+  }
+}
