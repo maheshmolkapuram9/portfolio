@@ -383,7 +383,7 @@ p{
 
 @keyframes scrolling{
   from {transform:translateX(0%)}
-  to {transform: translateX(-100%);}
+  to {transform: translateX(-1700px);}
 }
 
 /* project */
