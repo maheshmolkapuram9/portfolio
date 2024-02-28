@@ -7,7 +7,7 @@ const Home = () => {
                 <nav>
                     <div>
                         <NavLink className="about" to="about">
-                            <span>Hello</span>
+                            <span>Hi</span>
                         </NavLink>
                     </div>
                     <div>
