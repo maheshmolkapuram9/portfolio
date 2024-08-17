@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import Skills from "../components/Skills";
 import Achievements from "../components/Achievements";
 import BacktoHomeWithFooter from "../components/BacktoHome";
