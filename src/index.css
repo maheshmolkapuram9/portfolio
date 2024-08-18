@@ -314,6 +314,11 @@ p{
   }
 }
 
+.projectContainer a:hover{
+  font-style: italic;
+  text-decoration: underline;
+}
+
 .workTitle{
   display: flex;
   justify-content: space-between;

@@ -6,7 +6,7 @@ const Project = () => {
             {ProjectsList.map((project,index)=>{
                 return(
                     <div className="projectContainer" key={index}>
-                        <h5>{project.title}</h5>
+                        <a href={project.link} target="_blank" rel="noreferrer"><h5>{project.title}</h5></a>
                         <p className="technologies">{project.technologies}</p>
                         <p>{project.description}</p>
                         <div className="WorkExHover"></div>
